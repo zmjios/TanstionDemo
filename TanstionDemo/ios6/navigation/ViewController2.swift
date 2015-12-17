@@ -1,30 +1,23 @@
 //
-//  SecondViewController.swift
+//  ViewController2.swift
 //  TanstionDemo
 //
-//  Created by zmjios on 15/12/12.
+//  Created by zmjios on 15/12/17.
 //  Copyright © 2015年 zmjios. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewController2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.edgesForExtendedLayout = UIRectEdge.None
-        
-        self.title = "secondVc"
         
         
-        let imageView:UIImageView =  UIImageView.init(image: UIImage.init(named: "12.jpg"))
-        imageView.frame = CGRectMake(30, 30, self.view.bounds.size.width - 60, self.view.bounds.height - 60);
-        imageView.userInteractionEnabled = true
-        self.view.addSubview(imageView)
-        
+        self.title = "ViewController2"
+        self.view.backgroundColor = UIColor.redColor()
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,5 @@
 //
-//  PingDetailViewController.swift
+//  ViewController1.swift
 //  TanstionDemo
 //
 //  Created by zmjios on 15/12/17.
@@ -8,37 +8,31 @@
 
 import UIKit
 
-class PingDetailViewController: UIViewController {
+class ViewController1: UIViewController {
 
-    
-    var imageView:UIImageView?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.edgesForExtendedLayout = UIRectEdge.None
-        self.view.backgroundColor = UIColor.orangeColor()
+        
+        self.view.backgroundColor = UIColor.yellowColor()
+        self.title = "ViewController1"
+        
         
         let button:UIButton  = UIButton(type: UIButtonType.Custom)
-        button.frame = CGRectMake(self.view.bounds.size.width - 100, 40, 60, 60)
+        button.frame = CGRectMake(100, 100, 60, 60)
         button.tintColor = UIColor.blackColor()
         button.backgroundColor = UIColor.blackColor()
         button.layer.cornerRadius = 30
         button.layer.masksToBounds = true
-        button.addTarget(self, action: "backAction", forControlEvents: UIControlEvents.TouchUpInside);
+        button.addTarget(self, action: "pushAction", forControlEvents: UIControlEvents.TouchUpInside);
         self.view.addSubview(button)
         
         
-        let image:UIImage = UIImage.init(named: "12.jpg")!
-        self.imageView =  UIImageView.init(image:image)
-        self.imageView!.frame = CGRectMake((self.view.bounds.size.width - image.size.width)/2, 100, image.size.width, image.size.height);
-        self.imageView!.userInteractionEnabled = true
-        self.view.addSubview(self.imageView!)
-        
-        
-        self.customBackButton = button
+        let leftItem = UIBarButtonItem(title: "取消", style:UIBarButtonItemStyle.Plain, target: self, action: "cancelAction")
+        self.navigationItem.leftBarButtonItem = leftItem
+
         
     }
 
@@ -47,12 +41,12 @@ class PingDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    func backAction(){
+    func cancelAction(){
         
-        self.navigationController?.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -63,5 +57,15 @@ class PingDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    func pushAction(){
+        
+        
+        let vc = ViewController2()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }

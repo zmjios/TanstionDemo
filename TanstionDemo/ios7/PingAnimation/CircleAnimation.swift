@@ -30,7 +30,7 @@ class CircleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
         let toView:UIView =  (toVc?.view)!
         
         
-        //get the back button
+        //get the push button
         let pushButton:UIButton? = fromVc?.customPushButton
         
     

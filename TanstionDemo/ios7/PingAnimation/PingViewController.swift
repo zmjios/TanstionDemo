@@ -52,6 +52,7 @@ class PingViewController: UIViewController,UINavigationControllerDelegate{
         
         
         self.customPushButton = button
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,12 +93,18 @@ class PingViewController: UIViewController,UINavigationControllerDelegate{
     
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if operation == .Push{
-            
-            return CircleAnimation()
-        }
+//        if operation == .Push{
+//            
+//            return CircleAnimation()
+//        }
+//        
+//        return nil
         
-        return nil
+        
+        let animation:CircleReversibleAnimation = CircleReversibleAnimation()
+        animation.reverse = operation == .Pop
+        
+        return animation
     }
     
     

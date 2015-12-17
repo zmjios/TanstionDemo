@@ -20,9 +20,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     var tableView:UITableView?
-    let dataSource:[ClassModel] = [ClassModel.init(title: "ios7 before", subTitle: "demo1", controller: "ContainerViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "demo2", controller: "CustomViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "customAnimationForNavigationController", controller: "CustomNaviViewController"),
+    let dataSource:[ClassModel] = [ClassModel.init(title: "ios7 before", subTitle: "导航动画", controller: "ViewController1"),
+                                    ClassModel.init(title: "ios7 before", subTitle: "容器动画", controller: "ContainerViewController"),
+                                   ClassModel.init(title: "ios7 after", subTitle: "自定义模态动画", controller: "CustomViewController"),
+                                   ClassModel.init(title: "ios7 after", subTitle: "立方体动画", controller: "CustomNaviViewController"),
                                    ClassModel.init(title: "ios7 after", subTitle: "仿网易新闻", controller: "NewsViewController"),
                                    ClassModel.init(title: "ios7 after", subTitle: "图片查看详情", controller: "SourceViewController"),
                                    ClassModel.init(title: "ios7 after", subTitle: "ping动画", controller: "PingViewController")]
@@ -68,10 +69,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         if section == 0{
             
-            return 1;
+            return 2;
         }else
         {
-            return self.dataSource.count - 1
+            return self.dataSource.count - 2
         }
         
     }
@@ -96,48 +97,55 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         if indexPath.section == 0{
             
-            cell.textLabel?.text = (self.dataSource.first as ClassModel!).subTitle
+            cell.textLabel?.text = (self.dataSource[indexPath.row] as ClassModel!).subTitle
         }else
         {
-            if (indexPath.row >= 0 && indexPath.row + 1 <= self.dataSource.count){
-                cell.textLabel?.text = (self.dataSource[indexPath.row + 1] as ClassModel!).subTitle
+            if (indexPath.row >= 0 && indexPath.row + 2 <= self.dataSource.count){
+                cell.textLabel?.text = (self.dataSource[indexPath.row + 2] as ClassModel!).subTitle
             }
             
         }
         
-        
-        
-    
-        
         return cell
     }
-    
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
-        let className :String? = (indexPath.section == 0) ? (self.dataSource[0] as ClassModel!).controller:(self.dataSource[indexPath.row + 1] as ClassModel!).controller
+        let className :String? = (indexPath.section == 0) ? (self.dataSource[indexPath.row] as ClassModel!).controller:(self.dataSource[indexPath.row + 2] as ClassModel!).controller
         if className != nil && TranstionUtil.swiftClassFromString(className) != nil  {
-            if let vc:UIViewController? = (TranstionUtil.swiftClassFromString(className) as! UIViewController.Type).init(){
+            
+            if(indexPath.section == 0 && indexPath.row == 0){
                 
-                if(className == "NewsViewController"){
+                let vc:UIViewController? = (TranstionUtil.swiftClassFromString(className) as! UIViewController.Type).init()
+                let navi:CustomNavigationController = CustomNavigationController(rootViewController:vc!)
+                self.presentViewController(navi, animated: true, completion: nil)
+                
+                
+            }else
+            {
+                if let vc:UIViewController? = (TranstionUtil.swiftClassFromString(className) as! UIViewController.Type).init(){
                     
-                    if naviManager == nil{
+                    if(className == "NewsViewController"){
                         
-                        naviManager =  NagationAnimationManager.init(navi: self.navigationController!)
+                        if naviManager == nil{
+                            
+                            naviManager =  NagationAnimationManager.init(navi: self.navigationController!)
+                            
+                        }
                         
+                        navigationController?.delegate = naviManager
+                        
+                    }else
+                    {
+                        navigationController?.delegate = nil;
                     }
                     
-                    navigationController?.delegate = naviManager
-                    
-                }else
-                {
-                    navigationController?.delegate = nil;
+                    self.navigationController!.pushViewController(vc!, animated: true)
                 }
-                
-                self.navigationController!.pushViewController(vc!, animated: true)
+
             }
         }
     }
