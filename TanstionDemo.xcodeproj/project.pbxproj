@@ -26,6 +26,15 @@
 		7C62FACE1C204484008B218B /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FACD1C204484008B218B /* UIWindowExtension.swift */; };
 		7C62FAD31C210AA2008B218B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FAD21C210AA2008B218B /* NewsViewController.swift */; };
 		7C62FAD51C210AB0008B218B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FAD41C210AB0008B218B /* CommentViewController.swift */; };
+		7C62FB011C22456C008B218B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FAFA1C22456C008B218B /* DetailViewController.swift */; };
+		7C62FB021C22456C008B218B /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FAFB1C22456C008B218B /* SourceViewController.swift */; };
+		7C62FB031C22456C008B218B /* UIView+Snapshotting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FAFD1C22456C008B218B /* UIView+Snapshotting.m */; };
+		7C62FB041C22456C008B218B /* ZoomInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FAFF1C22456C008B218B /* ZoomInteractiveTransition.m */; };
+		7C62FB071C22499C008B218B /* CircleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FB061C22499C008B218B /* CircleAnimation.swift */; };
+		7C62FB091C224EF6008B218B /* PingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FB081C224EF6008B218B /* PingViewController.swift */; };
+		7C62FB0B1C224F0C008B218B /* PingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FB0A1C224F0C008B218B /* PingDetailViewController.swift */; };
+		7C62FB0D1C225508008B218B /* BaseReversibleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FB0C1C225508008B218B /* BaseReversibleAnimation.swift */; };
+		7C62FB0F1C2257C3008B218B /* GlobalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62FB0E1C2257C3008B218B /* GlobalAnimation.swift */; };
 		7C743F581C2024A400F15D58 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C743F571C2024A400F15D58 /* UIViewController+Extension.m */; };
 		7C743F5A1C20286E00F15D58 /* PopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C743F591C20286E00F15D58 /* PopAnimation.swift */; };
 		7C743F5C1C20288000F15D58 /* PushAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C743F5B1C20288000F15D58 /* PushAnimation.swift */; };
@@ -85,6 +94,18 @@
 		7C62FACD1C204484008B218B /* UIWindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 		7C62FAD21C210AA2008B218B /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		7C62FAD41C210AB0008B218B /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		7C62FAFA1C22456C008B218B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7C62FAFB1C22456C008B218B /* SourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		7C62FAFC1C22456C008B218B /* UIView+Snapshotting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshotting.h"; sourceTree = "<group>"; };
+		7C62FAFD1C22456C008B218B /* UIView+Snapshotting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshotting.m"; sourceTree = "<group>"; };
+		7C62FAFE1C22456C008B218B /* ZoomInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomInteractiveTransition.h; sourceTree = "<group>"; };
+		7C62FAFF1C22456C008B218B /* ZoomInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInteractiveTransition.m; sourceTree = "<group>"; };
+		7C62FB001C22456C008B218B /* ZoomTransitionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomTransitionProtocol.h; sourceTree = "<group>"; };
+		7C62FB061C22499C008B218B /* CircleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleAnimation.swift; sourceTree = "<group>"; };
+		7C62FB081C224EF6008B218B /* PingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingViewController.swift; sourceTree = "<group>"; };
+		7C62FB0A1C224F0C008B218B /* PingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingDetailViewController.swift; sourceTree = "<group>"; };
+		7C62FB0C1C225508008B218B /* BaseReversibleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseReversibleAnimation.swift; sourceTree = "<group>"; };
+		7C62FB0E1C2257C3008B218B /* GlobalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAnimation.swift; sourceTree = "<group>"; };
 		7C743F561C2024A400F15D58 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		7C743F571C2024A400F15D58 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		7C743F591C20286E00F15D58 /* PopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
@@ -161,6 +182,7 @@
 				7C576E0B1C1ABB8A0038AFFC /* TranstionUtil.m */,
 				7C743F561C2024A400F15D58 /* UIViewController+Extension.h */,
 				7C743F571C2024A400F15D58 /* UIViewController+Extension.m */,
+				7C62FB0C1C225508008B218B /* BaseReversibleAnimation.swift */,
 				7C576DD81C1A64860038AFFC /* Assets.xcassets */,
 				7C576DDA1C1A64860038AFFC /* LaunchScreen.storyboard */,
 				7C576DDD1C1A64860038AFFC /* Info.plist */,
@@ -190,6 +212,8 @@
 		7C576E521C1ADD4F0038AFFC /* ios7 */ = {
 			isa = PBXGroup;
 			children = (
+				7C62FB051C2248D5008B218B /* PingAnimation */,
+				7C62FAF91C22456C008B218B /* InteractiveZoom */,
 				7CB43C7E1C1C2BEF00CC56C4 /* globalBack */,
 				7CB43C701C1C1CD200CC56C4 /* customNavi */,
 				7C576E531C1BE2E10038AFFC /* customModal */,
@@ -207,6 +231,30 @@
 				7C576E5F1C1BFA3B0038AFFC /* SwipeUpInteractiveTransition.swift */,
 			);
 			path = customModal;
+			sourceTree = "<group>";
+		};
+		7C62FAF91C22456C008B218B /* InteractiveZoom */ = {
+			isa = PBXGroup;
+			children = (
+				7C62FAFA1C22456C008B218B /* DetailViewController.swift */,
+				7C62FAFB1C22456C008B218B /* SourceViewController.swift */,
+				7C62FAFC1C22456C008B218B /* UIView+Snapshotting.h */,
+				7C62FAFD1C22456C008B218B /* UIView+Snapshotting.m */,
+				7C62FAFE1C22456C008B218B /* ZoomInteractiveTransition.h */,
+				7C62FAFF1C22456C008B218B /* ZoomInteractiveTransition.m */,
+				7C62FB001C22456C008B218B /* ZoomTransitionProtocol.h */,
+			);
+			path = InteractiveZoom;
+			sourceTree = "<group>";
+		};
+		7C62FB051C2248D5008B218B /* PingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				7C62FB061C22499C008B218B /* CircleAnimation.swift */,
+				7C62FB081C224EF6008B218B /* PingViewController.swift */,
+				7C62FB0A1C224F0C008B218B /* PingDetailViewController.swift */,
+			);
+			path = PingAnimation;
 			sourceTree = "<group>";
 		};
 		7CB43C701C1C1CD200CC56C4 /* customNavi */ = {
@@ -234,6 +282,7 @@
 				7CB43C7F1C1E61DB00CC56C4 /* CustomDirectionGestureRecognizer.swift */,
 				7C743F591C20286E00F15D58 /* PopAnimation.swift */,
 				7C743F5B1C20288000F15D58 /* PushAnimation.swift */,
+				7C62FB0E1C2257C3008B218B /* GlobalAnimation.swift */,
 				7C743F5D1C2028BD00F15D58 /* UIViewExtension.swift */,
 				7C62FACD1C204484008B218B /* UIWindowExtension.swift */,
 				7C62FACB1C2030BE008B218B /* NagationAnimationManager.swift */,
@@ -376,30 +425,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C576DD41C1A64860038AFFC /* ViewController.swift in Sources */,
+				7C62FB091C224EF6008B218B /* PingViewController.swift in Sources */,
+				7C62FB0D1C225508008B218B /* BaseReversibleAnimation.swift in Sources */,
 				7CB43C7D1C1C264800CC56C4 /* CustomNaviViewController.swift in Sources */,
 				7C743F5C1C20288000F15D58 /* PushAnimation.swift in Sources */,
 				7C743F5A1C20286E00F15D58 /* PopAnimation.swift in Sources */,
 				7C576E0C1C1ABB8A0038AFFC /* TranstionUtil.m in Sources */,
+				7C62FB021C22456C008B218B /* SourceViewController.swift in Sources */,
 				7C576E041C1A7BD10038AFFC /* LeftViewController.swift in Sources */,
 				7CB43C761C1C221300CC56C4 /* SecondViewController.swift in Sources */,
+				7C62FB071C22499C008B218B /* CircleAnimation.swift in Sources */,
 				7C62FACE1C204484008B218B /* UIWindowExtension.swift in Sources */,
 				7C576E061C1A7C180038AFFC /* RightViewController.swift in Sources */,
+				7C62FB031C22456C008B218B /* UIView+Snapshotting.m in Sources */,
 				7CB43C741C1C1F1200CC56C4 /* CustomInteractiveAniamtion.swift in Sources */,
 				7C62FAD51C210AB0008B218B /* CommentViewController.swift in Sources */,
 				7C576E021C1A7A4B0038AFFC /* ContainerViewController.swift in Sources */,
 				7CB43C801C1E61DB00CC56C4 /* CustomDirectionGestureRecognizer.swift in Sources */,
+				7C62FB011C22456C008B218B /* DetailViewController.swift in Sources */,
 				7C576DD21C1A64860038AFFC /* AppDelegate.swift in Sources */,
+				7C62FB041C22456C008B218B /* ZoomInteractiveTransition.m in Sources */,
 				7CB43C6F1C1C132C00CC56C4 /* CustomDismissAnimation.swift in Sources */,
 				7C576E081C1A9A900038AFFC /* SwiftUtil.swift in Sources */,
 				7C62FAD31C210AA2008B218B /* NewsViewController.swift in Sources */,
 				7C743F581C2024A400F15D58 /* UIViewController+Extension.m in Sources */,
 				7C576E5A1C1BE3940038AFFC /* ModalViewController.swift in Sources */,
+				7C62FB0B1C224F0C008B218B /* PingDetailViewController.swift in Sources */,
 				7CB43C721C1C1DD900CC56C4 /* CubeAnimation.swift in Sources */,
 				7C62FACC1C2030BE008B218B /* NagationAnimationManager.swift in Sources */,
 				7C576E581C1BE3840038AFFC /* CustomViewController.swift in Sources */,
 				7C743F5E1C2028BD00F15D58 /* UIViewExtension.swift in Sources */,
 				7C576E5C1C1BE9C60038AFFC /* CustomModalAnimation.swift in Sources */,
 				7C576E601C1BFA3B0038AFFC /* SwipeUpInteractiveTransition.swift in Sources */,
+				7C62FB0F1C2257C3008B218B /* GlobalAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

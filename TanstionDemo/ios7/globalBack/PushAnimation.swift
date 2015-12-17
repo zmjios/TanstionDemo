@@ -45,7 +45,6 @@ class PushAnimation: NSObject,UIViewControllerAnimatedTransitioning{
             }, completion: {
                 
                 finish in
-                
 
                 fromView.transform = CGAffineTransformIdentity
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())

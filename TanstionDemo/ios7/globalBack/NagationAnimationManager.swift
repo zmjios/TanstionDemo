@@ -16,6 +16,7 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
     var shouldComplete:Bool = false   //拖拽是否完成动画
     var pushAnimation:PushAnimation?
     var popAnimation:PopAnimation?
+    var globalAnimation:GlobalAnimation?
     var interactiveTransition:UIPercentDrivenInteractiveTransition?
     
     init(navi:UINavigationController) {
@@ -39,6 +40,7 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
         
         self.pushAnimation = PushAnimation()
         self.popAnimation = PopAnimation()
+        self.globalAnimation = GlobalAnimation()
         
     }
     
@@ -141,7 +143,11 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        return operation == UINavigationControllerOperation.Push ? self.pushAnimation:self.popAnimation
+        //return operation == UINavigationControllerOperation.Push ? self.pushAnimation:self.popAnimation
+        
+         self.globalAnimation!.reverse = operation == .Pop
+        
+        return self.globalAnimation
     }
     
     

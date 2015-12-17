@@ -11,5 +11,7 @@
 @interface UIViewController (Extension)
 
 @property (nonatomic, strong) UIViewController *pushController;
+@property (nonatomic, strong) UIButton *customBackButton;
+@property (nonatomic, strong) UIButton *customPushButton;
 
 @end

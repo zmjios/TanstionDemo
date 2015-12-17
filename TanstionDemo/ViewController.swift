@@ -24,7 +24,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                                    ClassModel.init(title: "ios7 after", subTitle: "demo2", controller: "CustomViewController"),
                                    ClassModel.init(title: "ios7 after", subTitle: "customAnimationForNavigationController", controller: "CustomNaviViewController"),
                                    ClassModel.init(title: "ios7 after", subTitle: "仿网易新闻", controller: "NewsViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "demo5", controller: "")]
+                                   ClassModel.init(title: "ios7 after", subTitle: "图片查看详情", controller: "SourceViewController"),
+                                   ClassModel.init(title: "ios7 after", subTitle: "ping动画", controller: "PingViewController")]
     
     var naviManager:NagationAnimationManager?
 
