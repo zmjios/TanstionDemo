@@ -217,6 +217,7 @@
 		7C576E521C1ADD4F0038AFFC /* ios7 */ = {
 			isa = PBXGroup;
 			children = (
+				7C8A2B661C240C5500682F35 /* container */,
 				7C62FB051C2248D5008B218B /* PingAnimation */,
 				7C62FAF91C22456C008B218B /* InteractiveZoom */,
 				7CB43C7E1C1C2BEF00CC56C4 /* globalBack */,
@@ -291,6 +292,13 @@
 				7C62FB271C22C662008B218B /* ViewController2.swift */,
 			);
 			path = navigation;
+			sourceTree = "<group>";
+		};
+		7C8A2B661C240C5500682F35 /* container */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = container;
 			sourceTree = "<group>";
 		};
 		7CB43C701C1C1CD200CC56C4 /* customNavi */ = {
