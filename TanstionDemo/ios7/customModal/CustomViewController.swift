@@ -45,11 +45,9 @@ class CustomViewController: UIViewController,ModalViewControllerDelegate,UIViewC
          modalVc.delegate = self
         let navi:UINavigationController  = UINavigationController.init(rootViewController: modalVc)
         navi.transitioningDelegate = self
-        self.interactiveAnimation = SwipeUpInteractiveTransition.init(presentController: navi)
+        self.interactiveAnimation = SwipeUpInteractiveTransition(presentController: navi)
         self.presentViewController(navi, animated: true, completion: nil)
-        
-        
-    
+
     }
     
     func modalViewControllerDismissed(modalVc: UIViewController)

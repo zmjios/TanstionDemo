@@ -44,11 +44,13 @@ class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
             
         case UIGestureRecognizerState.Changed:
             //计算百分比，如果超过40%，则dismiss
-            let fraction:CGFloat = translation.x / UIScreen.mainScreen().bounds.size.height
+            let fraction:CGFloat = translation.y / UIScreen.mainScreen().bounds.size.height
             let fr:Float = fminf(fmaxf(Float(fraction), 0.0), 1.0)
             self.shouldComplete = fr >= 0.40
             
             let cgfraction:CGFloat = CGFloat(fr)
+            
+            print(cgfraction)
             
             self.updateInteractiveTransition(cgfraction)
             

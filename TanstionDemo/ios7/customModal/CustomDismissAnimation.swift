@@ -42,10 +42,11 @@ class CustomDismissAnimation: NSObject,UIViewControllerAnimatedTransitioning {
             
             ()->Void in
             
-            fromVc!.view.frame = finalFrame
+            fromVc!.view.transform = CGAffineTransformMakeScale(0.1, 0.1)
             
             }, completion:{
-                 Bool ->Void in
+                 finised ->Void in
+                fromVc!.view.transform = CGAffineTransformIdentity
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 
             }

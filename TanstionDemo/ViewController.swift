@@ -20,13 +20,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     var tableView:UITableView?
-    let dataSource:[ClassModel] = [ClassModel.init(title: "ios7 before", subTitle: "导航动画", controller: "ViewController1"),
-                                    ClassModel.init(title: "ios7 before", subTitle: "容器动画", controller: "ContainerViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "自定义模态动画", controller: "CustomViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "立方体动画", controller: "CustomNaviViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "仿网易新闻", controller: "NewsViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "图片查看详情", controller: "SourceViewController"),
-                                   ClassModel.init(title: "ios7 after", subTitle: "ping动画", controller: "PingViewController")]
+    let dataSource:[ClassModel] = [ClassModel(title: "ios7 before", subTitle: "导航动画", controller: "ViewController1"),
+                                    ClassModel(title: "ios7 before", subTitle: "容器动画", controller: "ContainerViewController"),
+                                   ClassModel(title: "ios7 after", subTitle: "自定义模态动画", controller: "CustomViewController"),
+                                   ClassModel(title: "ios7 after", subTitle: "立方体动画", controller: "CustomNaviViewController"),
+                                   ClassModel(title: "ios7 after", subTitle: "仿网易新闻", controller: "NewsViewController"),
+                                   ClassModel(title: "ios7 after", subTitle: "图片查看详情", controller: "SourceViewController"),
+                                   ClassModel(title: "ios7 after", subTitle: "ping动画", controller: "PingViewController")]
     
     var naviManager:NagationAnimationManager?
 
