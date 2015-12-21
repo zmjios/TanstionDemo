@@ -42,7 +42,7 @@ class CustomInteractiveAniamtion: UIPercentDrivenInteractiveTransition {
         case UIGestureRecognizerState.Changed:
             
             let percent = CGFloat(fminf(fmaxf(Float(translation.x / 200.0), 0.0), 1.0))
-            shouldComplete = percent >= 0.5
+            shouldComplete = percent >= 0.3
             self.updateInteractiveTransition(percent)
              break
             

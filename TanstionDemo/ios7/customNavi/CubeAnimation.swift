@@ -39,11 +39,14 @@ class CubeAnimation: NSObject,UIViewControllerAnimatedTransitioning{
         containerView.addSubview(toView)
         
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
+            
             containerView.transform = CGAffineTransformMakeTranslation(-direction * containerView.frame.size.width / 2.0, 0)
             fromView.layer.transform = viewFromTransform
             toView.layer.transform = CATransform3DIdentity
+            
             }, completion: {
                 finished in
+                
                 containerView.transform = CGAffineTransformIdentity
                 fromView.layer.transform = CATransform3DIdentity
                 toView.layer.transform = CATransform3DIdentity

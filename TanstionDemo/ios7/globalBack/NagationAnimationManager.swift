@@ -48,14 +48,15 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
     func handleGesture(gesture:CustomDirectionGestureRecognizer){
         
         
-        let view:UIView = self.navigationController.view.superview!
+        let view:UIView = self.navigationController.view
         let translation = gesture.translationInView(view)
         
         switch(gesture.state){
             
         case UIGestureRecognizerState.Began:
             
-            if self.interactiveTransition == nil{
+            if self.interactiveTransition == nil
+            {
                 self.interactiveTransition = UIPercentDrivenInteractiveTransition()
                 self.interactiveTransition?.completionCurve = UIViewAnimationCurve.Linear
             }
@@ -125,8 +126,6 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
         default:
             break;
         }
-        
-        
     }
     
     

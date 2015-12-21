@@ -17,8 +17,6 @@ struct ClassModel{
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
     
-    
-    
     var tableView:UITableView?
     let dataSource:[ClassModel] = [ClassModel(title: "ios7 before", subTitle: "导航动画", controller: "ViewController1"),
                                     ClassModel(title: "ios7 before", subTitle: "容器动画", controller: "ContainerViewController"),

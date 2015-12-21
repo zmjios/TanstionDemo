@@ -25,7 +25,7 @@ class CustomModalAnimation: NSObject,UIViewControllerAnimatedTransitioning {
         let fromVc:UIViewController? = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let toVc:UIViewController? = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         
-        //2. 设置 toVc的frame，这里如果不设置，toVc的frame会不正常
+        //2. 设置 toVc的frame
         let screenBounds:CGRect = UIScreen.mainScreen().bounds
         let finalFrame:CGRect = transitionContext.finalFrameForViewController(toVc!)
         
@@ -40,7 +40,6 @@ class CustomModalAnimation: NSObject,UIViewControllerAnimatedTransitioning {
         //3 将toVc.view 添加到containerView
         let containerView:UIView = transitionContext.containerView()!
         containerView.addSubview((toVc?.view)!)
-        
         
         print("containerView = ")
         print(containerView)

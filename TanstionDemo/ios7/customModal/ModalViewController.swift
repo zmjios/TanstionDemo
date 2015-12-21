@@ -29,7 +29,7 @@ class ModalViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.lightGrayColor()
         self.edgesForExtendedLayout = UIRectEdge.None
-        self.title = "Modal View"
+        self.title = "ModalViewController"
         
         let button:UIButton = UIButton.init(type: UIButtonType.RoundedRect)
         button.setTitle("dismiss modal vc", forState:UIControlState.Normal)

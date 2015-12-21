@@ -1,35 +1,22 @@
 //
-//  CommentViewController.swift
+//  RightViewController.swift
 //  TanstionDemo
 //
-//  Created by zmjios on 15/12/16.
+//  Created by 曾明剑 on 15/12/20.
 //  Copyright © 2015年 zmjios. All rights reserved.
 //
 
 import UIKit
 
-class CommentViewController: UIViewController {
+class RightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.title = "CommentViewController"
-        
-        self.view.backgroundColor = UIColor.whiteColor()
-        
-        let label:UILabel = UILabel.init(frame: CGRectMake(20, 100, self.view.bounds.size.width - 40, 200))
-        label.numberOfLines = 0
-        label.textAlignment = NSTextAlignment.Center
-        label.text = "这是新闻评论，我们是有态度的新闻客户端😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂"
-        self.view.addSubview(label)
-        
-        
+        self.view.backgroundColor = UIColor.blueColor()
     }
-    
-    
-   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

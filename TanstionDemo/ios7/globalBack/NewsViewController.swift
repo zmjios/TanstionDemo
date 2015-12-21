@@ -17,6 +17,7 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "NewsViewController"
         
         self.view.backgroundColor = UIColor.whiteColor()
         

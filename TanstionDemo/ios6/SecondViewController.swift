@@ -1,41 +1,36 @@
 //
-//  CommentViewController.swift
+//  SecondViewController.swift
 //  TanstionDemo
 //
-//  Created by zmjios on 15/12/16.
+//  Created by 曾明剑 on 15/12/20.
 //  Copyright © 2015年 zmjios. All rights reserved.
 //
 
 import UIKit
 
-class CommentViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        
-        self.title = "CommentViewController"
-        
         self.view.backgroundColor = UIColor.whiteColor()
+        self.edgesForExtendedLayout = UIRectEdge.None
         
-        let label:UILabel = UILabel.init(frame: CGRectMake(20, 100, self.view.bounds.size.width - 40, 200))
-        label.numberOfLines = 0
-        label.textAlignment = NSTextAlignment.Center
-        label.text = "这是新闻评论，我们是有态度的新闻客户端😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂😂"
-        self.view.addSubview(label)
+        self.title = "secondVc"
         
-        
+        let imageView:UIImageView =  UIImageView.init(image: UIImage.init(named: "12.jpg"))
+        imageView.frame = CGRectMake(30, 30, self.view.bounds.size.width - 60, self.view.bounds.height - 60);
+        imageView.userInteractionEnabled = true
+        self.view.addSubview(imageView)
     }
     
-    
-   
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
 
     /*
     // MARK: - Navigation

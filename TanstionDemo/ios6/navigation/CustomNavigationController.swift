@@ -44,6 +44,7 @@ class CustomNavigationController: UINavigationController {
             transition.subtype = kCATransitionFromRight
             
             self.view.layer.addAnimation(transition, forKey: kCATransition)
+        
             
         }
         
