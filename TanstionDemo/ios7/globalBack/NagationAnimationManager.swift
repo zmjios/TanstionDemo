@@ -14,8 +14,6 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
     var panGesture:CustomDirectionGestureRecognizer?
     var duringAnimation:Bool = false  //是否正在动画中
     var shouldComplete:Bool = false   //拖拽是否完成动画
-    var pushAnimation:PushAnimation?
-    var popAnimation:PopAnimation?
     var globalAnimation:GlobalAnimation?
     var interactiveTransition:UIPercentDrivenInteractiveTransition?
     
@@ -28,25 +26,22 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
         commonInit()
     }
     
-    
     func commonInit(){
         
+        //初始化手势
         panGesture = CustomDirectionGestureRecognizer.init(target: self,action:"handleGesture:")
         panGesture?.direction = [Directions.Left,Directions.Right]
         panGesture?.delegate = self
         self.navigationController.view.addGestureRecognizer(panGesture!)
         
         self.navigationController.delegate = self
-        
-        self.pushAnimation = PushAnimation()
-        self.popAnimation = PopAnimation()
+    
         self.globalAnimation = GlobalAnimation()
         
     }
     
     
     func handleGesture(gesture:CustomDirectionGestureRecognizer){
-        
         
         let view:UIView = self.navigationController.view
         let translation = gesture.translationInView(view)
@@ -55,8 +50,7 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
             
         case UIGestureRecognizerState.Began:
             
-            if self.interactiveTransition == nil
-            {
+            if self.interactiveTransition == nil{
                 self.interactiveTransition = UIPercentDrivenInteractiveTransition()
                 self.interactiveTransition?.completionCurve = UIViewAnimationCurve.Linear
             }
@@ -82,6 +76,7 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
             
             if gesture.dragDiretion == Directions.Right{
                 
+                //向右滑动
                 //计算百分比，如果超过40%，则pop
                 let fraction:CGFloat = translation.x / UIScreen.mainScreen().bounds.size.height
                 let fr:Float = fminf(fmaxf(Float(fraction), 0.0), 1.0)
@@ -93,7 +88,7 @@ class NagationAnimationManager: NSObject,UIGestureRecognizerDelegate,UINavigatio
                 
             }else if gesture.dragDiretion == Directions.Left{
                 
-                
+                //向左滑动
                 let fraction:CGFloat = abs(translation.x) / UIScreen.mainScreen().bounds.size.height
                 let fr:Float = fminf(fmaxf(Float(fraction), 0.0), 1.0)
                 self.shouldComplete = fr >= 0.30

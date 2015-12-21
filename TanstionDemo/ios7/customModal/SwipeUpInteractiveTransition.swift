@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
+class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition{
     
     var interacting:Bool = false
     
@@ -22,7 +22,10 @@ class SwipeUpInteractiveTransition: UIPercentDrivenInteractiveTransition {
         
         self.presentingController = presentController
         
-        let panGesture:UIPanGestureRecognizer  = UIPanGestureRecognizer.init(target: self, action: "gestureAction:")
+        let panGesture:UIPanGestureRecognizer  = UIPanGestureRecognizer(target: self, action: "gestureAction:")
+        //边缘手势
+//        let panGesture:UIScreenEdgePanGestureRecognizer  = UIScreenEdgePanGestureRecognizer(target: self, action: "gestureAction:")
+//        panGesture.edges = UIRectEdge.Left
         self.presentingController!.view.addGestureRecognizer(panGesture)
         
     }

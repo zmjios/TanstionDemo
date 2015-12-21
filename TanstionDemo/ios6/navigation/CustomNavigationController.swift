@@ -39,13 +39,11 @@ class CustomNavigationController: UINavigationController {
         if animated{
             
             let transition = CATransition()
-            transition.duration = 0.3
-            transition.type = "cube"
+            transition.duration = 0.6
+            transition.type = kCATransitionFade
             transition.subtype = kCATransitionFromRight
             
             self.view.layer.addAnimation(transition, forKey: kCATransition)
-        
-            
         }
         
         super.pushViewController(viewController, animated: false)
@@ -58,7 +56,7 @@ class CustomNavigationController: UINavigationController {
         if animated
         {
             let transition = CATransition()
-            transition.duration = 0.3
+            transition.duration = 0.6
             transition.type = "cube"
             transition.subtype = kCATransitionFromLeft
             

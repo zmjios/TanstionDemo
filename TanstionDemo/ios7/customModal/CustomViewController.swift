@@ -54,8 +54,7 @@ class CustomViewController: UIViewController,ModalViewControllerDelegate,UIViewC
     }
 
     
-    
-    
+
     func buttonClicked(sender:UIButton){
         
         let modalVc:ModalViewController = ModalViewController()
